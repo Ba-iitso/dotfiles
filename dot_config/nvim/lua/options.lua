@@ -1,6 +1,8 @@
 -- [[ Setting options ]]
 -- See ':help vim.o'
 
+vim.cmd("colorscheme cyberdream")
+
 -- sets line number for current line and relative for all others
 vim.wo.number = true
 vim.wo.relativenumber = true

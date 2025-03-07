@@ -1,9 +1,9 @@
 return {
-    {
-        -- Color scheme
-        'bluz71/vim-moonfly-colors',
-        name = 'moonfly',
-        lazy = false,
-        priority = 1000,
-    },
+	{
+		-- Color scheme
+		"scottmckendry/cyberdream.nvim",
+		lazy = false,
+		priority = 1000,
+
+	},
 }
