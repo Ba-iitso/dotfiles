@@ -31,6 +31,5 @@ require "options"
 -- [[ Basic Keymaps ]]
 require "keymaps"
 
--- [[ Configure Treesitter ]]
--- (syntax parser for highlighting)
-require "treesitter-setup"
+-- [[ lsp configuration ]]
+require "lsp"

@@ -1,7 +1,22 @@
 return {
 	{
 		"folke/snacks.nvim",
+		priority = 1000,
+		lazy = false,
+		---@type snacks.Config
 		opts = {
+			explorer = {
+				enabled = true,
+			},
+
+			dashboard = {
+				enabled = true,
+				sections = {
+					{ icon = " ", title = "Keymaps", section = "keys", indent = 2, padding = 1 },
+					{ icon = " ", title = "Recent Files", section = "recent_files", indent = 2, padding = 1 },
+					{ icon = " ", title = "Projects", section = "projects", indent = 2, padding = 1 },
+				},
+			},
 			picker = {
 				actions = {
 					flash = function(picker)
@@ -25,11 +40,6 @@ return {
 				},
 			},
 
-			explorer = {
-				enabled = true,
-				replace_netrw = true,
-			},
-
 		},
 		keys = {
 			-- Top Pickers & Explorer
@@ -38,7 +48,7 @@ return {
 			{ "<leader>/", function() Snacks.picker.grep() end, desc = "Grep" },
 			{ "<leader>:", function() Snacks.picker.command_history() end, desc = "Command History" },
 			{ "<leader>n", function() Snacks.picker.notifications() end, desc = "Notification History" },
-			{ "<leader>x", function() Snacks.explorer() end, desc = "File Explorer" },
+			{ "<leader>E", function() Snacks.explorer.open() end, desc = "File [E]xplorer" },
 			-- find
 			{ "<leader>fb", function() Snacks.picker.buffers() end, desc = "Buffers" },
 			{ "<leader>fc", function() Snacks.picker.files({ cwd = vim.fn.stdpath("config") }) end, desc = "Find Config File" },
